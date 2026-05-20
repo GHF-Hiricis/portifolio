@@ -1,0 +1,121 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Metallic Gradient -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#cbd5e1"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="75%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <!-- Glow Effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Hex Pattern -->
+    <pattern id="hexPattern" width="40" height="34.64" patternUnits="userSpaceOnUse">
+      <path d="M20 0 L40 8.66 L40 25.98 L20 34.64 L0 25.98 L0 8.66 Z"
+            fill="none"
+            stroke="rgba(255,255,255,0.08)"
+            stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" rx="80" fill="url(#bgGradient)"/>
+
+  <!-- Pattern Overlay -->
+  <rect width="800" height="800" rx="80" fill="url(#hexPattern)"/>
+
+  <!-- Outer Ring -->
+  <circle cx="400" cy="400" r="280"
+          fill="none"
+          stroke="rgba(255,255,255,0.12)"
+          stroke-width="6"/>
+
+  <!-- Main Badge -->
+  <circle cx="400" cy="400" r="240"
+          fill="rgba(15,23,42,0.75)"
+          stroke="rgba(255,255,255,0.15)"
+          stroke-width="3"
+          filter="url(#shadow)"/>
+
+  <!-- Accent Lines -->
+  <circle cx="400" cy="400" r="250"
+          fill="none"
+          stroke="#22d3ee"
+          stroke-width="3"
+          stroke-dasharray="12 18"
+          opacity="0.7"
+          filter="url(#glow)"/>
+
+  <!-- Initials -->
+  <text x="400" y="455"
+        text-anchor="middle"
+        font-family="Orbitron, 'Segoe UI', sans-serif"
+        font-size="180"
+        font-weight="900"
+        letter-spacing="12"
+        fill="url(#metalGradient)"
+        filter="url(#glow)">
+    GHF
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="560"
+        text-anchor="middle"
+        font-family="'Segoe UI', sans-serif"
+        font-size="28"
+        font-weight="600"
+        letter-spacing="8"
+        fill="rgba(255,255,255,0.65)">
+    DEVELOPER
+  </text>
+
+  <!-- Corner Accents -->
+  <path d="M120 200 L120 120 L200 120"
+        fill="none"
+        stroke="#67e8f9"
+        stroke-width="6"
+        stroke-linecap="round"
+        opacity="0.8"/>
+
+  <path d="M680 200 L680 120 L600 120"
+        fill="none"
+        stroke="#67e8f9"
+        stroke-width="6"
+        stroke-linecap="round"
+        opacity="0.8"/>
+
+  <path d="M120 600 L120 680 L200 680"
+        fill="none"
+        stroke="#67e8f9"
+        stroke-width="6"
+        stroke-linecap="round"
+        opacity="0.8"/>
+
+  <path d="M680 600 L680 680 L600 680"
+        fill="none"
+        stroke="#67e8f9"
+        stroke-width="6"
+        stroke-linecap="round"
+        opacity="0.8"/>
+</svg>
