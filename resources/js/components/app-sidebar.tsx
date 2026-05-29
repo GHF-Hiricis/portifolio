@@ -22,16 +22,21 @@ const mainNavItems: NavItem[] = [
         href: dashboard(),
         icon: LayoutGrid,
     },
+    {
+        title: 'Projects',
+        href: '/projects',
+        icon: FolderGit2,
+    },
 ];
 
 const footerNavItems: NavItem[] = [
     {
         title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
+        href: 'https://github.com/GHF-Hiricis/portifolio',
         icon: FolderGit2,
     },
     {
-        title: 'Documentation',
+        title: 'Laravel Documentation',
         href: 'https://laravel.com/docs/starter-kits#react',
         icon: BookOpen,
     },
